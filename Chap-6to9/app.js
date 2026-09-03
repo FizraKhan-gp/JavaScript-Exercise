@@ -73,3 +73,22 @@ document.write('1 - 0 + 1 + 1' + '<br>')
 document.write('1 + 1 +1' +'<br>')
 document.write('3' + '</br>')
 document.write('<br>')
+
+// 3. Write a program that takes input a name from user & greet the user.
+
+var name = prompt("Enter your name:");
+alert("Hello " + name + "! Welcome.");
+
+// 4. Write a program to take input a number from user & display it’s multiplication table on your browser. If user does not enter a new number, multiplication table of 5 should be displayed by default. 
+
+var number = prompt("Enter a number:");
+
+if (number === null || number === "") {
+    number = 10;
+}
+
+document.write("<h2>Multiplication Table of " + number + "</h2>");
+
+for (var i = 1; i <= 10; i++) {
+    document.write(number + " × " + i + " = " + (number * i) + "<br>");
+}

@@ -138,3 +138,66 @@ for (var i = 1; i < A.length; i++) {
 for (var i = 5; i <= 100; i += 5) {
     document.write(i + "<br>");
 }
+
+var sum = 0;
+ for (var i = 1; i <= 4; i++) { 
+    console.log(sum = sum + i); //0+1=1 1+2=3 3+3=6 6+4=10
+ }
+
+ var arr = [3, 6, 9]; for (var i = 0; i < arr.length; i++) { arr[i] = arr[i] + 1; } console.log(arr[0]);
+
+//  var rows = 5;
+
+// // Outer loop: Controls the lines (rows)
+// for (var i = 1; i <= rows; i++) {
+//     var line = "";
+
+//     // Inner Loop 1: Adds the decreasing leading spaces
+//     for (var j = 1; j <= rows - i; j++) {
+//         line += " ";
+//     }
+
+//     // Inner Loop 2: Adds the increasing asterisks
+//     for (var k = 1; k <= i; k++) {
+//         line += "*";
+//     }
+
+//     console.log(line);
+// }
+
+
+// for (var i = 5; i >= 0; i--) { //3
+//     for(var j=1; j<=i; j++){ //1
+//         document.write("*")
+//     }
+    
+//     document.write("<br>")
+// }
+
+
+// // Outer loop: Starts at 5 spaces/slots and counts down to 1
+// for (var i = 5; i >= 1; i--) { 
+    
+//     // Inner Loop 1: Prints the spaces (Starts at i-1 and decreases)
+//     for (var j = 1; j <= i; j--) {
+//         document.write("*");
+//     }
+    
+//     // Moves to the next line in HTML
+//     document.write("<br>");
+// }
+
+for (var i = 1; i <= 5; i++) {
+
+    // spaces
+    for (var j = 1; j <= 5 - i; j++) {
+        document.write("&nbsp;");
+    }
+
+    // stars
+    for (var k = 1; k <= (2 * i - 1); k++) {
+        document.write("*");
+    }
+
+    document.write("<br>");
+}

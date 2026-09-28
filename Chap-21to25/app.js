@@ -177,6 +177,10 @@ if (isFound === true) {
 
  document.write(`${universityArray} <br>`)
 
+ for (var i = 0; i < universityArray.length; i++) {
+            document.write(universityArray[i] + "<br>");
+        }
+
 //for Letter
 
  var universityArr = university.split("");
@@ -184,6 +188,10 @@ if (isFound === true) {
  console.log(universityArr);
 
  document.write(`${universityArr} <br>`)
+
+ for (var i = 0; i < universityArr.length; i++) {
+            document.write(universityArr[i] + "<br>");
+        }
 
 //  Write a program to display the last character of a user input.
 

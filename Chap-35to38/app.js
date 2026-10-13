@@ -92,6 +92,17 @@ factorial(factNumber);
 
 // 7. Write a function that take start and end number as inputs & display counting in your browser. 
 
+function displayCounting(start, end) {
+   
+    for (var i = start; i <= end; i++) {
+        console.log(i);
+    }   
+     console.log("Counting from " + start + " to " + end + ":");
+}
+ var startNum = +prompt("Enter start number: ");
+var endNum = +prompt("Enter end number: ");
+
+displayCounting(startNum, endNum);
 
 
 

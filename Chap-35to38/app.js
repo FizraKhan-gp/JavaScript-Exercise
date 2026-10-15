@@ -244,6 +244,11 @@ function calcCircumference(radius) {
     console.log("The circumference is " + circumference.toFixed(2));
 }
 
+var userRadius = +prompt("Enter the radius of the circle:");
+
+
+calcCircumference(userRadius);
+
 // Create a function called calcArea: 
 // • Pass the radius to the function. 
 // • Calculate the area based on the radius, and output "The area 
@@ -258,3 +263,6 @@ function calcArea(radius) {
 }
 
 
+var userRadius = +prompt("Enter the radius of the circle:");
+
+calcArea(userRadius);

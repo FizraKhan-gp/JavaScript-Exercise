@@ -7,6 +7,16 @@ console.log(power(2,3));
 
 // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not. Leap years ..., 2012, 2016, 2020, … 
 
+function leapYear(year) {
+    if (year % 400 === 0 ||
+        (year % 4 === 0 && year % 100 !== 0)) {
+        console.log("Leap Year");
+    } else {
+        console.log("Not a Leap Year");
+    }
+}
+
+leapYear(2024);
 
 // 3. If the lengths of the sides of a triangle are denoted by a, b, and c, then area of triangle is given by area = S(S − a)(S − b)(S − c) where, S = ( a + b + c ) / 2 Calculate area of triangle using 2 functions 
 
@@ -158,16 +168,26 @@ overtime(45);
 
 // 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the withdrawer. 
 
-var amount = 580;
+var amount = parseInt(prompt("Enter the amount to be withdrawn (e.g., 500, 1250):"));
 
-var notes100 = Math.floor(amount / 100);
-amount = amount % 100;
+if (isNaN(amount) || amount <= 0) {
+    console.log("Please enter a valid positive amount.");
+} else {
+    var notes100 = Math.floor(amount / 100);
+    var remainingAmount = amount % 100;
 
-var notes50 = Math.floor(amount / 50);
-amount = amount % 50;
+    var notes50 = Math.floor(remainingAmount / 50);
+    remainingAmount = remainingAmount % 50;
 
-var notes10 = Math.floor(amount / 10);
+    var notes10 = Math.floor(remainingAmount / 10);
+    remainingAmount = remainingAmount % 10;
 
-console.log("100 notes: " + notes100);
-console.log("50 notes: " + notes50);
-console.log("10 notes: " + notes10);
+    console.log("Total Amount: Rs. " + amount);
+    console.log("--- Currency Notes Breakdown ---");
+    console.log("Rs. 100 Notes : " + notes100);
+    console.log("Rs. 50 Notes  : " + notes50);
+    console.log("Rs. 10 Notes  : " + notes10);
+    
+}
+
+

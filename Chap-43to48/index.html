@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>1.Link</h2>
+    <a href="#" onclick="alert('Welcome!')">Click Here</a>
+    <h2>2.Mobile Phones</h2>
+
+    <img src="images/iphone.jpg" width="400px" height="400px"
+         onclick="alert('You clicked IPhone')">
+    
+    <img src="images/samsung.jpg"width="400px" height="400px"
+         onclick="alert('You clicked SAMSUNG')">
+    
+    <img src="images/google pixel.jpg"width="400px" height="400px"
+         onclick="alert('You clicked Google Pixel')">
+
+    <h2>3.</h2>
+     <table>
+        <tr>
+         <th>Index</th>
+         <th> Name</th>  
+         <th>Class</th> 
+         <th></th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>John</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>9</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mark</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>James</td>
+            <td>8</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Eraj</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Fizra</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Sundua</td>
+            <td>9</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Hafsa</td>
+            <td>6</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Junaid</td>
+            <td>5</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Abbas</td>
+            <td>9</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Farwa</td>
+            <td>10</td>
+            <td><button onclick="deleteRow(this)">DELETE</button></td>
+        </tr>
+     </table>
+     
+     <h2>4.Change Image</h2>
+     
+     <img src="images/Bulb off Dark Background (1).png" width="400px" height="400px"
+          onmouseover="src='images/Bulb on Dark Background.png'" 
+          onmouseout="src='images/Bulb off Dark Background (1).png'">
+
+
+     <h2>5.Counter: <span id="count">0</span></h2>
+
+     <button onclick="increase()">Increase</button>
+     <button onclick="decrease()">Decrease</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

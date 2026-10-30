@@ -92,12 +92,17 @@ function addStudent(event) {
     <td>${studentClassValue}</td>
     <td>${studentRollValue}</td>
     <td>${studentEmailValue}</td>
-    <td><button onclick="editRow()">Edit</button>
+    <td><button onclick="editRow(this)">Edit</button>
       <button onclick="deleteRow(this)">Delete</button></td>
       </tr>`
 
 }
-function editRow(){
+function editRow(e){
+  var  activeRow = e.parentNode.parentNode
+  var currentName = activeRow.children[0].textContent
+  var currentClass = activeRow.children[1].textContent
+  var currentRow = activeRow.children[2].textContent
+  var currentName = activeRow.children[3].textContent
 
 }
 

@@ -1,16 +1,16 @@
 
-        // QUESTION 1: SIGNUP FORM
+// QUESTION 1: SIGNUP FORM
 
-        
-        function toggleForm(){
-            var name = document.getElementById("name").value
-            var email = document.getElementById("email").value
-            var number = document.getElementById("number").value
-           
-            var myCard = document.getElementById("myCard")
-            var form = document.getElementById("form")
-            form.style.display="none"
-            myCard.innerHTML=`<div class="id-card">
+
+function toggleForm() {
+    var name = document.getElementById("name").value
+    var email = document.getElementById("email").value
+    var number = document.getElementById("number").value
+
+    var myCard = document.getElementById("myCard")
+    var form = document.getElementById("form")
+    form.style.display = "none"
+    myCard.innerHTML = `<div class="id-card">
             <div class="id-header">
                <img src="https://lms.saylaniit.com/sit-logo-on-dark.png" class="id-logo" alt="logo">
                <img class="id-photo" src="https://lms.saylaniit.com/sit-logo-on-dark.png" alt="photo" />
@@ -43,26 +43,65 @@
                 www.website.com
             </div>
         </div>`
-            
-        }
-        
-        
-        
-                // QUESTION 2: READ MORE
-        
-               function expand() {
-            var shortPara = "Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.";
-        
-            var expandedParagraph = "Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time. Slow lorises have a toxic bite, a rare trait among mammals.";
-        
-            if (document.getElementById("link").innerHTML === "see more...") {
-                document.getElementById("slowLoris").innerHTML = expandedParagraph;
-                document.getElementById("link").innerHTML = "see less";
-            } else {
-                document.getElementById("slowLoris").innerHTML = shortPara;
-                document.getElementById("link").innerHTML = "see more...";
-            }
-        }
-        
-        
-                // QUESTION 3: STUDENT DETAILS
+
+}
+
+
+
+// QUESTION 2: READ MORE
+
+function expand() {
+    var shortPara = "Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.";
+
+    var expandedParagraph = "Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time. Slow lorises have a toxic bite, a rare trait among mammals.";
+
+    if (document.getElementById("link").innerHTML === "see more...") {
+        document.getElementById("slowLoris").innerHTML = expandedParagraph;
+        document.getElementById("link").innerHTML = "see less";
+    } else {
+        document.getElementById("slowLoris").innerHTML = shortPara;
+        document.getElementById("link").innerHTML = "see more...";
+    }
+}
+
+
+// QUESTION 3: STUDENT DETAILS
+
+function addStudent(event) {
+    event.preventDefault()
+    var studentNameValue = document.getElementById("studentName").value
+    var studentClassValue = document.getElementById("studentClass").value
+    var studentRollValue = document.getElementById("studentRoll").value
+    var studentEmailValue = document.getElementById("studentEmail").value
+
+    var tableBody = document.getElementById("studentTable")
+    // var row = document.createElement("tr")
+
+    // row.innerHTML = `
+    //                 <td>${studentNameValue}</td>
+    //                 <td>${studentClassValue}</td>
+    //                 <td>${studentRollValue}</td>
+    //                 <td>${studentEmailValue}</td>
+    //                 <td><button onclick="editRow()">Edit</button>
+    //                   <button onclick="deleteRow()">Delete</button></td>`
+
+    // tableBody.appendChild(row)
+    studentTable.innerHTML += `
+    <tr>
+    <td>${studentNameValue}</td>
+    <td>${studentClassValue}</td>
+    <td>${studentRollValue}</td>
+    <td>${studentEmailValue}</td>
+    <td><button onclick="editRow()">Edit</button>
+      <button onclick="deleteRow(this)">Delete</button></td>
+      </tr>`
+
+}
+function editRow(){
+
+}
+
+function deleteRow(e){
+   e.closest("tr").remove();
+    
+}
